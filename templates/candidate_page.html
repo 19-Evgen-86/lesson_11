@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}{{ data.name }}{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1 class="h1">{{ data.name }}</h1>
+        <img src="{{ data.picture }}" width=200/>
+        <p> Место в жизни: {{ data.position }}</p>
+        <p> Навыки: {{ data.skills }}</p>
+        <hr class="hr">
+        <a class="alert-link" href="/">Назад</a>
+    </div>
+
+{% endblock %}
