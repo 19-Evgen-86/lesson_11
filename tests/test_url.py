@@ -21,12 +21,12 @@ class TestViews:
         assert response.status_code == 200
 
     def test_load_candidates_by_name(self):
-        response = self.client.get("/search/day")
-        assert response.status_code == 200
+        response = self.client.get("/search/day/1")
+        assert response.status_code == 308
 
     def test_load_candidates_by_skills(self):
-        response = self.client.get("/skill/flask")
-        assert response.status_code == 200
+        response = self.client.get("/skill/flask/1")
+        assert response.status_code == 308
     def test_candidate_search(self):
         response = self.client.get("/search/?Search=day")
         assert response.status_code == 200
