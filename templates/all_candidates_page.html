@@ -21,5 +21,15 @@
 
             {% endfor %}
         </ul>
+        {% if count_page > 1 %}
+            <div>
+
+                {% for i  in  range(1, count_page + 1 ) %}
+
+                    <a href="/{{ i }}">{{ i }}</a>
+
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
